@@ -8,4 +8,4 @@ We didn't comment to much, pretty much mostly html and css, and games just rock 
  
 **At least we didn't use app lab**
 
-Rylee on his way to contribute absolutely nothing:
+Ryle**y** on his way to contribute absolutely nothing:
