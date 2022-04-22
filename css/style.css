@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Roboto";
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  height: 100%;
+  text-align:center;
+}
+
+:root {
+  --accents: black;
+  --navbg: #15be7f;
+  --textcolor: black;
+  --outlines: black;
+  --hovers: #2db497;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
+  background-image: url(background.jpg);
+  background-size: 100% 100%;
+  color: var(--textcolor);
+  font-family: 'Roboto';
+  font-weight: 450;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.navbar {
+  background: #15be7f;
+  border-bottom: 2px solid black;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  letter-spacing: 0.8px;
+  margin-bottom: 25px;
+  z-index: 9212;
+
+}
+
+.navbar a {
+  color: var(--textcolor);
+  display: block;
+  float: left;
+  font-size: 17px;
+  padding: 12px 15px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: var(--hovers);
+  color: var(--textcolor);
+}
+
+.navbar .icon {
+  display: none;
+}
+
+a,
+.navbar a.active {
+  color: var(--textcolor);
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    display: block;
+    float: right;
+  }
+  .navbar.responsive {
+    position: fixed;
+    width: 100%;
+    z-index: 69111;
+  }
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    display: block;
+    float: none;
+    text-align: left;
+  }
+}
+
+.bodycontainer {
+  letter-spacing: 0.6px;
+  color: var(--textcolor);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  height: 100%;
+  justify-content: center;
+  line-height: 0.4;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bar {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border: 2px solid var(--outlines);
+  color: var(--textcolor);
+  display: flex;
+  height: 40px;
+  min-width: 360px;
+  outline: none;
+  width: 50%;
+    margin: 0 auto;
+    text-align:center;
+    margin-right: auto;
+margin-left: auto;
+}
+
+input,
+button {
+  background-color: var(--backgrounds);
+  color: var(--textcolor);
+  border: 0;
+}
+
+input {
+  color: var(--textcolor);
+  outline: none;
+  padding: 10px;
+  width: 100%;
+}
+
+#gframe {
+  position: fixed;
+  top: 45px;
+  left: 0px;
+  width: 100%;
+  height: -webkit-calc(100% - 45px);
+  height: calc(100% - 45px);
+  z-index: 1;
+}
+
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-arrow-right:before {
+  content: "\f061";
+}
+
+.fa-bars:before {
+  content: "\f0c9"
+}
