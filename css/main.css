@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "roboto";
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'roboto';
   font-weight: normal;
   font-style: normal;
 }
@@ -52,11 +52,11 @@ body {
 }
 
 h1 {
-  font-family: Roboto;
+  font-family: roboto;
 }
 
 .h3 {
-  font-family: Roboto;
+  font-family: roboto;
   font-size: 9px;
 }
 
