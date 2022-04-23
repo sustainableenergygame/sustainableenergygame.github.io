@@ -122,7 +122,7 @@ function climatechangePlay() {
 }
 
 function playRound(playerSelection, computerSelection) {
-  climatechangeSelection = computerPlay().toLowerCase();
+  climatechangeSelection = climatechangePlay().toLowerCase();
   earthSelection = earthSelection.toLowerCase();
   if (climatechangeSelection == earthSelection) {
     displayResults("Tie game!");
