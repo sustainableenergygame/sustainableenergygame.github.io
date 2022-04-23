@@ -121,7 +121,7 @@ function climatechangePlay() {
   return myArray[~~(Math.random() * myArray.length)];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(earthSelection, climatechangeSelection) {
   climatechangeSelection = climatechangePlay().toLowerCase();
   earthSelection = earthSelection.toLowerCase();
   if (climatechangeSelection == earthSelection) {
