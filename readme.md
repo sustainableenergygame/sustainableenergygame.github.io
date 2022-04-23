@@ -1,11 +1,3 @@
-A bad static site we made in 2 days because we procrastinated a Hackathon
+Read folder .md files for more info on each folder
 
-We don't talk about it
-
-You can find info on each folder in the MD files cool
-
-We didn't comment to much, pretty much mostly html and css, and games just rock paper scissors customized
- 
-**At least we didn't use app lab**
-
-Riley on his way to contribute absolutely nothing:
+Sorry for rushed pitch
