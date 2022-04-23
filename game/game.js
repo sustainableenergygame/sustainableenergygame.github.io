@@ -13,10 +13,10 @@ const returnMainBtn = document.querySelector("#retry-btn");
 const desc = document.querySelector("#desc3");
 const container = document.querySelector("#results-container");
 
-body.addEventListener("click", skipAnime());
-body.addEventListener("keydown", skipAnime());
+body.addEventListener("click", skipIntro());
+body.addEventListener("keydown", skipIntro());
 
-function skipAnime() {
+function skipIntro() {
   const span = document.querySelectorAll("span");
 
   span.forEach((span) => span.classList.add("skip"));
@@ -24,6 +24,7 @@ function skipAnime() {
 
 function beginningAnimation() {
   fadeIn();
+  //need to turn nodelist of spans into an array so we can access last value for ontransitionend
   const desc1 = document.querySelector("#desc1");
   let desc1Span = desc1.querySelectorAll("span");
 
@@ -41,6 +42,9 @@ function beginningAnimation() {
       desc2.classList.remove("disappear");
       desc2.classList.add("animate");
       fadeIn();
+      /* need to collect nodelist of span 
+in the same function we activate fadein()
+or else nodelist will be empty */
       let desc2Span = desc2.querySelectorAll("span");
       desc2Span = Array.from(desc2Span);
 
@@ -74,12 +78,14 @@ function beginningAnimation() {
     });
   };
 }
+
 function fadeIn() {
   let text = document.querySelector(".animate");
 
   let strText = text.textContent;
   let splitText = strText.split("");
   text.textContent = "";
+  //append span tags to each character in the string
   for (i = 0; i < splitText.length; i++) {
     text.innerHTML += `<span>${splitText[i]}</span>`;
   }
@@ -91,6 +97,7 @@ function fadeIn() {
     const span = text.querySelectorAll("span")[char];
     span.classList.add("fade");
     char++;
+    //stops the function from running once the end of the string has been reached
     if (char === splitText.length) {
       complete();
       return;
@@ -117,7 +124,7 @@ buttons.forEach((button) => {
 
 const myArray = ["dam", "solarpanel", "windturbine"];
 
-function climatechangePlay() {
+function computerPlay() {
   return myArray[~~(Math.random() * myArray.length)];
 }
 
@@ -127,37 +134,37 @@ function playRound(earthSelection, climatechangeSelection) {
   if (climatechangeSelection == earthSelection) {
     displayResults("Tie game!");
   } else if (
-    (climatechangeSelection == "dam" && playerSelection == "windturbine") ||
-    (climatechangeSelection == "windturbine" && playerSelection == "solarpanel") ||
-    (climatechangeSelection == "solarpanel" && playerSelection == "dam")
+    (climatechangeSelection == "dam" && earthSelection == "windturbine") ||
+    (climatechangeSelection == "windturbine" && earthSelection == "solarpanel") ||
+    (climatechangeSelection == "solarpanel" && earthSelection == "dam")
   ) {
     climatechangeScore = ++climatechangeScore;
     keepCpuScore();
     if (climatechangeScore === 1) {
       displayResults(
-        `How could you! You lost!
+        `Oh no! You lost.
         ${capitalize(climatechangeSelection)} beats ${earthSelection}.`
       );
-    } else if (earthScore === 2) {
+    } else if (climatechangeScore === 2) {
       displayResults(
-        `Damn. ${capitalize(
+        `Arghh. ${capitalize(
           climatechangeSelection
-        )} beats ${earthSelection}. It's match point! Don't let us down!`
+        )} beats ${earthSelection}. Give it another shot!`
       );
     } else {
       displayResults(`${climatechangeSelection} beats ${earthSelection}`);
     }
   } else {
     earthScore = ++earthScore;
-    keepPlayerScore();
+    keepEarthScore();
     if (earthScore === 1) {
       displayResults(
-        `Yay! You won a round.
+        `Lets go!!! You won.
         ${capitalize(earthSelection)} beats ${climatechangeSelection}.`
       );
     } else if (earthScore === 2) {
       displayResults(
-        `One more and you'll beat Climate Change! ${capitalize(
+        `You're pretty good at this. ${capitalize(
           earthSelection
         )} beats ${climatechangeSelection}.`
       );
@@ -185,10 +192,10 @@ function displayResults(str) {
 function declareWinner() {
   rplContent();
   if (earthScore > climatechangeScore) {
-    endDesc.textContent = "You win! Earth survives another day with sustainable energy!!";
+    endDesc.textContent = "You win! Mankind lives another day!!";
     returnMainBtn.innerText = "Play Again";
   } else {
-    endDesc.textContent = "You lost...who will save Earth now, without sustainable energy?";
+    endDesc.textContent = "You lost...who will save mankind now?";
     returnMainBtn.innerText = "Try Again?";
   }
   fadeIn();
