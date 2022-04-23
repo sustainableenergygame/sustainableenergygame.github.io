@@ -2,27 +2,6 @@ html {
   height:100%;
 }
 
-.bg {
-  animation:slide 3s ease-in-out infinite alternate;
-  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
-  bottom:0;
-  left:-50%;
-  opacity:.5;
-  position:fixed;
-  right:-50%;
-  top:0;
-  z-index:-1;
-}
-
-.bg2 {
-  animation-direction:alternate-reverse;
-  animation-duration:4s;
-}
-
-.bg3 {
-  animation-duration:5s;
-}
-
 body {
   margin: 0;
   background: #3fc588;
@@ -59,7 +38,7 @@ body {
 .button {
   width: 200px;
   height: 200px;
-  border: 1px solid white;
+  border: 1px solid black;
   margin: 0 25px;
   display: flex;
   justify-content: center;
@@ -111,8 +90,8 @@ body {
   border-radius: 0.15em;
   box-sizing: border-box;
   text-decoration: none;
-  color: #646464;
-  background-color: rgb(245, 245, 245);
+  color: black;
+  background-color: #A9A9A9;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   position: relative;
   margin-top: 25px;
