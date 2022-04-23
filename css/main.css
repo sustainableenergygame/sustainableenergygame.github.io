@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Ubuntu";
+  font-family: "Roboto";
 }
 
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: 'Roboto';
   font-weight: normal;
   font-style: normal;
 }
@@ -186,21 +186,4 @@ margin-left: auto;
   height: -webkit-calc(100% - 45px);
   height: calc(100% - 45px);
   z-index: 1;
-}
-
-.fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.fa-arrow-right:before {
-  content: "\f061";
-}
-
-.fa-bars:before {
-  content: "\f0c9"
 }
