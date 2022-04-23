@@ -138,14 +138,14 @@ function playRound(earthSelection, climatechangeSelection) {
     keepCpuScore();
     if (climatechangeScore === 1) {
       displayResults(
-        `Oh no! You lost.
+        `Oh no! You lost a round.
         ${capitalize(climatechangeSelection)} beats ${earthSelection}.`
       );
     } else if (climatechangeScore === 2) {
       displayResults(
-        `Arghh. ${capitalize(
+        `Damn. ${capitalize(
           climatechangeSelection
-        )} beats ${earthSelection}. Give it another shot!`
+        )} beats ${earthSelection}. This is your final shot. It's matchpoint.`
       );
     } else {
       displayResults(`${climatechangeSelection} beats ${earthSelection}`);
@@ -155,12 +155,12 @@ function playRound(earthSelection, climatechangeSelection) {
     keepEarthScore();
     if (earthScore === 1) {
       displayResults(
-        `Lets go!!! You won.
+        `Yay! You won a round.
         ${capitalize(earthSelection)} beats ${climatechangeSelection}.`
       );
     } else if (earthScore === 2) {
       displayResults(
-        `You're pretty good at this. ${capitalize(
+        `Your good at this! One more and we win! ${capitalize(
           earthSelection
         )} beats ${climatechangeSelection}.`
       );
@@ -188,10 +188,10 @@ function displayResults(str) {
 function declareWinner() {
   rplContent();
   if (earthScore > climatechangeScore) {
-    endDesc.textContent = "You win! Mankind lives another day!!";
-    returnMainBtn.innerText = "Play Again";
+    endDesc.textContent = "You win! Earth lives another day, now with sustainable energy!";
+    returnMainBtn.innerText = "Play Again?";
   } else {
-    endDesc.textContent = "You lost...who will save mankind now?";
+    endDesc.textContent = "You lost... who will save Earth now?";
     returnMainBtn.innerText = "Try Again?";
   }
   fadeIn();
