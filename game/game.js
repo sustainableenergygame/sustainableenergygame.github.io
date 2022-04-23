@@ -24,7 +24,6 @@ function skipIntro() {
 
 function beginningAnimation() {
   fadeIn();
-  //need to turn nodelist of spans into an array so we can access last value for ontransitionend
   const desc1 = document.querySelector("#desc1");
   let desc1Span = desc1.querySelectorAll("span");
 
