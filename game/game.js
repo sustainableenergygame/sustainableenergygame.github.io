@@ -41,9 +41,6 @@ function beginningAnimation() {
       desc2.classList.remove("disappear");
       desc2.classList.add("animate");
       fadeIn();
-      /* need to collect nodelist of span 
-in the same function we activate fadein()
-or else nodelist will be empty */
       let desc2Span = desc2.querySelectorAll("span");
       desc2Span = Array.from(desc2Span);
 
@@ -227,7 +224,7 @@ function resetGame() {
   container.textContent = "";
   earthScore = 0;
   climatechangeScore = 0;
-  keepPlayerScore();
+  keepEarthScore();
   keepCpuScore();
   console.log("hello");
 }
