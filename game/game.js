@@ -225,8 +225,8 @@ function rplContent() {
 function resetGame() {
   fadeIn();
   container.textContent = "";
-  playerScore = 0;
-  computerScore = 0;
+  earthScore = 0;
+  climatechangeScore = 0;
   keepPlayerScore();
   keepCpuScore();
 }
