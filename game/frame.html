@@ -10,49 +10,46 @@
     />
   </head>
   <body>
-    <div class="bg"></div>
-    <div class="bg bg2"></div>
-    <div class="bg bg3"></div>
-      <main id="main-content">
-        <h1 id="title">Earth vs Climate Change</h1>
-        <p class="desc animate" id="desc1">
-          Climate change is saying it will destroy the world...
-        </p>
-        <p class="desc disappear" id="desc2">
-          Unless you can beat it in a game of Sustainable Energy first to
+    <main id="main-content">
+      <h1 id="title">Earth vs Climate Change</h1>
+      <p class="desc animate" id="desc1">
+        Climate change is saying it will destroy the world...
+      </p>
+      <p class="desc disappear" id="desc2">
+        Unless you can beat it in a game of Sustainable Energy first to
         3 ...
-        </p>
-        <p class="desc disappear" id="desc3">
-          Do you have what it takes to save the Earth?
-        </p>
-        <p id="cta">Choose your sustainable energy source!</p>
-        <div id="game-container">
-          <div id="btn-container">
-            <div id="dam" class="button">
-              <img src="dam.png" alt="Dam" />
-            </div>
-            <div id="solarpanel" class="button">
-              <img src="solarpanel.png" alt="Solarpanel" />
-            </div>
-            <div id="windturbine" class="button">
-              <img src="windturbine.png" alt="Windturbine" height=150px width=80px/>
-            </div>
+      </p>
+      <p class="desc disappear" id="desc3">
+        Do you have what it takes to save the Earth?
+      </p>
+      <p id="cta">Choose your sustainable energy source!</p>
+      <div id="game-container">
+        <div id="btn-container">
+          <div id="dam" class="button">
+            <img src="dam.png" alt="Dam" />
           </div>
-          <div id="score-label">
-            <p class="label">Earth</p>
-            <p class="label">Climate Change</p>
+          <div id="solarpanel" class="button">
+            <img src="solarpanel.png" alt="Solarpanel" />
           </div>
-          <div id="score-container">
-            <div id="earth-score" class="score">0</div>
-            <div id="climate-change-score" class="score">0</div>
+          <div id="windturbine" class="button">
+            <img src="windturbine.png" alt="Windturbine" height=150px width=80px/>
           </div>
-          <div id="results-container"></div>
         </div>
-      </main>
-      <div id="end-alert" class="disappear">
-        <div id="end-desc"></div>
-        <a id="retry-btn"></a>
+        <div id="score-label">
+          <p class="label">Earth</p>
+          <p class="label">Climate Change</p>
+        </div>
+        <div id="score-container">
+          <div id="earth-score" class="score">0</div>
+          <div id="climate-change-score" class="score">0</div>
+        </div>
+        <div id="results-container"></div>
       </div>
-    <script src="game.js"></script>
+    </main>
+    <div id="end-alert" class="disappear">
+      <div id="end-desc"></div>
+      <a id="retry-btn"></a>
+    </div>
+  <script src="game.js"></script>
   </body>
 </html>
