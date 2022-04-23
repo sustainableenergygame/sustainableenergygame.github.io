@@ -124,7 +124,7 @@ buttons.forEach((button) => {
 
 const myArray = ["Dam", "Solarpanel", "Windturbine"];
 
-function computerPlay() {
+function climatechangePlay() {
   return myArray[~~(Math.random() * myArray.length)];
 }
 
