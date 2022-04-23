@@ -52,12 +52,12 @@ body {
 }
 
 h1 {
-  font-family:ubuntu;
+  font-family: Roboto;
 }
 
 .h3 {
-  font-family: Ubuntu;
-  font-size: 5px;
+  font-family: Roboto;
+  font-size: 9px;
 }
 
 @keyframes slide {
