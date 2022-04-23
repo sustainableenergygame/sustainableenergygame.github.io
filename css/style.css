@@ -55,6 +55,11 @@ h1 {
   font-family:ubuntu;
 }
 
+h3 {
+  font-family:ubuntu;
+  font-size:10px;
+}
+
 @keyframes slide {
   0% {
     transform:translateX(-25%);
