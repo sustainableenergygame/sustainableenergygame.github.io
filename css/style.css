@@ -1,9 +1,9 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "Ubuntu";
 }
 
 @font-face {
-  font-family: 'Roboto';
+  font-family: 'Ubuntu';
   font-weight: normal;
   font-style: normal;
 }
@@ -22,15 +22,45 @@ body {
   --hovers: #2db497;
 }
 
-@keyframes gradient-animation {
+html {
+  height:100%;
+}
+
+body {
+  margin:0;
+}
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+h1 {
+  font-family:ubuntu;
+}
+
+@keyframes slide {
   0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
+    transform:translateX(-25%);
   }
   100% {
-    background-position: 0% 50%;
+    transform:translateX(25%);
   }
 }
 
@@ -141,20 +171,6 @@ ul {
     text-align:center;
     margin-right: auto;
 margin-left: auto;
-}
-
-input,
-button {
-  background-color: var(--backgrounds);
-  color: var(--textcolor);
-  border: 0;
-}
-
-input {
-  color: var(--textcolor);
-  outline: none;
-  padding: 10px;
-  width: 100%;
 }
 
 #gframe {
