@@ -122,7 +122,7 @@ buttons.forEach((button) => {
   });
 });
 
-const myArray = ["dam", "solarpanel", "windturbine"];
+const myArray = ["Dam", "Solarpanel", "Windturbine"];
 
 function computerPlay() {
   return myArray[~~(Math.random() * myArray.length)];
