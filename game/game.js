@@ -229,6 +229,7 @@ function resetGame() {
   climatechangeScore = 0;
   keepPlayerScore();
   keepCpuScore();
+  console.log("hello");
 }
 
 function keepEarthScore() {
